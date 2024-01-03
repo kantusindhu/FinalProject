@@ -1,0 +1,58 @@
+{%include "aheader.html" %}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+                   <div class="container">
+                       <div class="row">
+                           <h2>Data Preprocessing</h2>
+                       </div>
+               </div>
+<br>
+
+<hr>
+<form action="data_preprocessing" method="post">
+                         <h5>Select Dataset</label>
+                        <table width="50%">
+                     <tr>
+						<td><input type="file"  name="file" class="form-control" required accept="text/csv">
+
+                     <tr>
+						<td align="right">
+                     <button class="btn btn-danger btn-sm" class="form-control">Data Preprocessing&nbsp;</button></td>
+                     </tr>
+                     </tr>
+                     </table>
+</form>
+
+			  {% if msg %}
+<h5>{{msg}}</h5>
+{% endif %}
+<br>
+<br><br><br><br>
+
+
+{%include "footer.html" %}

@@ -1,0 +1,160 @@
+{%include "uheader.html" %}
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+</head>
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<h2>Prediction Results  </h2>
+<table id="customers" align="center">
+  <tr>
+    <th>Car Name</th>
+    <th>Model (Year)</th>
+      <th>Driven (km)</th>
+    <th>Fuel Type</th>
+      <th>Mileage</th>
+	        <th>Engine CC</th>
+				        <th>No of Seats </th>
+										        <th>Price </th>
+
+  </tr>
+{% for item in data1 %}
+	<tr>
+	<td><strong>{{item[1]}}</strong></td>
+<td><strong>{{item[3]}}</strong></td>
+<td><strong>{{item[4]}}</strong></td>
+<td><strong>{% if item[5]=='1' %}
+Diesel
+{% endif %}
+
+{% if item[5]=='2' %}
+Petrol
+{% endif %}
+{% if item[5]=='3' %}
+CNG
+{% endif %}
+{% if item[5]=='4' %}
+LPG
+{% endif %}
+
+</strong></td>
+<td><strong>{{item[8]}} KMPL</strong></td>
+<td><strong>{{item[9]}} CC</strong></td>
+<td><strong>{{item[11]}} </strong></td>
+<td><strong>{{item[12]}} lakh</strong></td>
+
+    </tr>
+{% endfor %}
+
+
+
+
+
+    </table>
+
+
+			
+<br><h2>Recommendations  </h2>
+<table id="customers" align="center">
+  <tr>
+    <th>Car Name</th>
+    <th>Model (Year)</th>
+      <th>Driven (km)</th>
+    <th>Fuel Type</th>
+      <th>Mileage</th>
+	        <th>Engine CC</th>
+				        <th>No of Seats </th>
+										        <th>Price </th>
+
+  </tr>
+{% for item in data %}
+	<tr>
+	<td><strong>{{item[1]}}</strong></td>
+<td><strong>{{item[3]}}</strong></td>
+<td><strong>{{item[4]}}</strong></td>
+<td><strong>{% if item[5]=='1' %}
+Diesel
+{% endif %}
+
+{% if item[5]=='2' %}
+Petrol
+{% endif %}
+{% if item[5]=='3' %}
+CNG
+{% endif %}
+{% if item[5]=='4' %}
+LPG
+{% endif %}
+
+</strong></td>
+<td><strong>{{item[8]}} KMPL</strong></td>
+<td><strong>{{item[9]}} CC</strong></td>
+<td><strong>{{item[11]}} </strong></td>
+<td><strong>{{item[12]}} lakh</strong></td>
+
+    </tr>
+{% endfor %}
+
+
+
+
+
+    </table>
+
+<br><br><br><br>
+<section class="our-blog row">
+
+
+        		<div class="blog-row row">
+        			<div class="col-lg-4 col-md-6">
+        				<div class="single-blog">
+
+                                 <div class="chart" id="barchart">
+
+
+</div>
+        				</div>
+        			</div>
+
+
+
+
+        		</div>
+
+
+
+
+         </section>
+
+
+
+{%include "footer.html" %}

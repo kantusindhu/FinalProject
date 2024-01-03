@@ -1,0 +1,35 @@
+{% include "header.html" %}
+
+
+
+
+  {% if msg %}
+
+		<script>alert('Invalid Credentials')</script>
+
+    {% endif %}
+
+	<center><h3>Admin Login</h3>
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="adminlogin_check" method="post">
+
+                         <label></label>
+<table width="50%"><tr><td>
+						<input type="text" placeholder="Enter UserID" name="unm" class="form-control" required ></div>
+               <tr><td><br>
+			   
+			   <input type="password" name="pwd" placeholder="Enter Password" class="form-control input-sm"  required></div>
+               <tr><td>   <br>   <button class="btn btn-danger btn-sm">&nbsp;LOGIN&nbsp;</button>
+
+
+</form>
+</table>
+
+
+
+
+
+
+{% include "footer.html" %}

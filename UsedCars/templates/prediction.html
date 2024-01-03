@@ -1,0 +1,194 @@
+{%include "uheader.html" %}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+
+<div class="page-nav no-margin row" xmlns="http://www.w3.org/1999/html">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Used Car prediction</h2>
+                       </div>
+                   </div>
+               </div>
+
+
+
+<div style="margin-top:0px;" class="row">
+
+      </div>
+<form action="predictionaction" method="post">
+      <div class="row contact-rooo">
+
+
+
+           <div class="row w-100">
+            <div style="padding:20px" class="col-sm-8">
+
+
+  <div class="row">
+                 <div class="col-sm-8">
+                      <input type="text" placeholder="Enter Model Year" name="year" class="form-control input-sm" required >
+                        </div>
+                </div>
+
+
+ <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+               <input type="text" placeholder="Enter Kilometers driven" name="km" class="form-control input-sm" required >
+                                        </div>
+ </div>
+
+
+ <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+			                          <label>Select Fuel Type:</label>
+<select name="fuel" class="form-control input-sm">
+	<option value="1" selected>Diesel
+	<option value="2">Petrol
+		<option value="3">CNG
+			<option value="4">LPG	
+</select>
+										
+										</div>
+ </div>
+
+
+
+
+
+                 <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+                         <label>Transmission:</label>
+
+		       <select name="tra" class="form-control input-sm">
+	<option value="1" selected>Manual
+	<option value="2">Automatice
+		</select>
+                                        </div>
+ </div>
+
+
+
+
+
+
+              <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+                         <label>Owner Type</label>
+
+		             <select name="owner" class="form-control input-sm">
+	<option value="1" selected>First
+	<option value="2">Second
+		<option value="3">Third
+			<option value="4">Fourth
+		</select>
+                                        </div>
+ </div>
+
+
+
+              <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+                         <label>No. of Seats</label>
+
+		             <select name="seats" class="form-control input-sm">
+	<option value="5" selected>Five Seater
+	<option value="6">Six Seater
+		<option value="7">Seven Seater
+			<option value="8">EightSeater
+		</select>
+                                        </div>
+ </div>
+
+
+
+
+
+              <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+
+
+		       	<input type="number" placeholder="Enter Mileage:" name="mil" min=1 class="form-control input-sm" required >
+                                        </div>
+ </div>
+
+
+
+              <div style="margin-top:10px;" class="row">
+             <div class="col-sm-8">
+
+		       	<input type="number" placeholder="Enter Engine CC:" name="cc" class="form-control input-sm" required >
+                                        </div>
+ </div>
+<br>
+  <div class="row">
+                    <div class="col-sm-8">
+                       
+
+                          <input type="number" placeholder="Enter Power bhp" name="bhp" class="form-control input-sm" required >
+                        </div>
+                </div>
+    
+
+
+
+
+
+
+
+
+                 <div style="margin-top:10px;" class="row">
+
+
+                     <button class="btn btn-danger btn-sm">&nbsp;&nbsp;Predict&nbsp;&nbsp;</button>
+<br><br>
+
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-3">
+
+                  <div style="margin:6px" class="serv">
+
+
+
+
+           </div>
+
+
+         </div>
+
+            </div>
+        </div>
+</form>
+
+
+<br><br>
+<br><br><br><br>
+
+
+{%include "footer.html" %}
