@@ -153,6 +153,12 @@ def evaluations():
     knn_list.append(recall_knn)
     knn_list.append(fscore_knn)
 
+    from KNN import errors
+    mae_knn, mse_knn, rse_knn=errors()
+    knn_list.append(mae_knn)
+    knn_list.append(mse_knn)
+    knn_list.append(rse_knn)
+
     from NN import main
     accuracy_nn, precision_nn, recall_nn, fscore_nn=main()
     
@@ -161,6 +167,12 @@ def evaluations():
     nn_list.append(precision_nn)
     nn_list.append(recall_nn)
     nn_list.append(fscore_nn)
+
+    from NN import errors
+    mae_nn, mse_nn, rse_nn=errors()
+    nn_list.append(mae_nn)
+    nn_list.append(mse_nn)
+    nn_list.append(rse_nn)
 
     from LR import main
     accuracy_lr, precision_lr, recall_lr, fscore_lr=main()
@@ -171,6 +183,12 @@ def evaluations():
     lr_list.append(recall_lr)
     lr_list.append(fscore_lr)
 
+    from LR import errors
+    mae_lr, mse_lr, rse_lr=errors()
+    lr_list.append(mae_lr)
+    lr_list.append(mse_lr)
+    lr_list.append(rse_lr)
+
     from SVM import main
     accuracy_svm, precision_svm, recall_svm, fscore_svm =main()
 
@@ -179,6 +197,14 @@ def evaluations():
     svm_list.append(precision_svm)
     svm_list.append(recall_svm)
     svm_list.append(fscore_svm)
+    
+    from SVM import errors
+    mae_svm, mse_svm, rse_svm =errors()
+
+    svm_list.append(mae_svm)
+    svm_list.append(mse_svm)
+    svm_list.append(rse_svm)
+
 
     
 
