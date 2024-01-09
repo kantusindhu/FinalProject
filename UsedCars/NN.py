@@ -1,3 +1,9 @@
+# author: kantus
+# Date: 10/27/2023
+# Details:
+# 1). Used the syntax for Nueral Network Algorithm using Decision Tree Classifier. https://www.datacamp.com/tutorial/decision-tree-classification-python how to calculate the accuracy and same 
+#     and used different sources to pull how to calculate the Precision, Recall, F1 Score, Mean Absolute Error, Mean Squared Error 
+#     and R-Squared Error.
 
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from sklearn import metrics

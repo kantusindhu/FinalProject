@@ -1,3 +1,9 @@
+# author: kantus
+# Date: 10/06/2023
+# Details: 
+# 1). This Python file is created to pull four algorithms and do a comparision with the values calculated.
+# 2). Here we are calculating the Prediction of Cars using MLP Classifier for the Neural Newtworks algorithm.
+
 from flask import Flask, render_template, request,flash
 from flask import Response
 from matplotlib.figure import Figure
@@ -205,13 +211,6 @@ def evaluations():
     svm_list.append(mse_svm)
     svm_list.append(rse_svm)
 
-
-    
-
-
-
-
-
     metrics.clear()
     metrics.append(knn_list)
     metrics.append(nn_list)
@@ -396,10 +395,6 @@ def predictionaction():
     bhp = request.form.get("bhp")
     seats = request.form.get("seats")
 
-
-
-
-
     df = pd.read_csv("preprocessed_dataset.csv")
 
     y_train = df['Name']
@@ -413,13 +408,10 @@ def predictionaction():
     print(df.columns)
 
 
-
     X_test=[[float(year),float(km),float(fuel),float(tra),float(owner),float(mil),float(cc),float(bhp),float(seats)]]
     print(X_test)
 
     model=''
-
-
 
     if os.path.exists('model.pkl'):
         with open('model.pkl', 'rb') as f:

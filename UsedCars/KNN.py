@@ -1,3 +1,9 @@
+# author: kantus
+# Date: 10/27/2023
+# Details:
+# 1). Used the syntax for K-Nearest Neighbours https://towardsdatascience.com/k-nearest-neighbors-94395f445221 how to calculate the accuracy and same 
+#     and used different sources to pull how to calculate the Precision, Recall, F1 Score, Mean Absolute Error, Mean Squared Error 
+#     and R-Squared Error.       
 
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
 from sklearn import metrics

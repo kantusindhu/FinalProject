@@ -1,3 +1,9 @@
+# author: kantus
+# Date: 11/03/2023
+# Details:
+# 1). For SVM Model, I have used the LinearSVC to calcuate the Accuracy, Precision, Recall and F1 Score.
+# 2). Source: https://www.simplilearn.com/tutorials/scikit-learn-tutorial/sklearn-svm-support-vector-machines
+# 3). For calculating the Mean Absolute Error, Mean Squared Error and R-Squared Error are calaulted using the DecisionTreeRegressor.
 
 from sklearn.svm import LinearSVC
 from sklearn.metrics import f1_score, precision_score, accuracy_score, recall_score,confusion_matrix
@@ -12,7 +18,7 @@ def svm_evaluation(X_train, X_test, y_train, y_test):
     db = DBConnection.getConnection()
     cursor = db.cursor()
 
-    svm_clf = DecisionTreeClassifier()
+    svm_clf = LinearSVC()
 
     svm_clf.fit(X_train, y_train)
 

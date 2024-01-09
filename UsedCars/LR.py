@@ -1,3 +1,11 @@
+# author: kantus
+# Date: 11/03/2023
+# Details:
+# 1). Worked on Linear Regression using LogisticRegression method 
+# 2). Source:https://towardsdatascience.com/logistic-regression-using-python-sklearn-numpy-mnist-handwriting-recognition-matplotlib-a6b31e2b166a
+# 3). Using LogisticRegression, I have calculated the accuracy, precision, recall and F1 Score.
+# 4). For calculating the Mean Absolute Error, Mean Squeared Error and R-Squared Error with LabelEncoder syntax.
+
 from sklearn import metrics
 from sklearn.metrics import f1_score, precision_score, accuracy_score, recall_score,confusion_matrix, mean_squared_error, mean_absolute_error
 
